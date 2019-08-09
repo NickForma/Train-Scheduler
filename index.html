@@ -33,24 +33,31 @@
 
     <div class="header">
       <h1>It's Choo Choo Time</h1>
+      <iframe src="https://giphy.com/embed/rKTbZdgvF2IWA" width="480" height="200" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
     </div>
 
     <div class="currentInfo">
-      <table>
-        <tr>
+      <table class="table">
+        <tr class="titleRow">
           <th>Train Name</th>
-          <th>Time</th>
+          <th>Destination</th>
           <th>Frequency</th>
+          <th>Next Arrival</th>
+          <th>Minutes Away</th>
         </tr>
         <tr>
           <td>Mr. Train</td>
-          <td>Noon</td>
-          <td>every minute</td>
+          <td>Burger King </td>
+          <td>05:00</td>
+          <td>05:30</td>
+          <td>30 minutes</td>
         </tr>
         <tr>
-          <td>Mr. Train</td>
-          <td>Noon</td>
-          <td>every minute</td>
+          <td>Mrs. Train</td>
+          <td>McDonalds</td>
+          <td>06:00</td>
+          <td>05:20</td>
+          <td>20 minutes</td>
         </tr>
       </table>
     </div>
@@ -63,10 +70,13 @@
         Train Name:
         <input type="text" name="trainName" value="Train Name" class="trainName" />
         <br />
-        Arrival Time:
+        Destination:
+        <input type="text" name="trainDest" value="Train Destination" class="trainDest" />
+        <br />
+        First Train Time (HH:mm, military time):
         <input type="text" name="trainTime" value="Train Time" class="trainTime" />
         <br />
-        Frequency:
+        Frequency (min):
         <input type="text" name="trainFreq" value="Train Freqency" class="trainFreq" />
         <button class="submit">Submit</button>
       </form>

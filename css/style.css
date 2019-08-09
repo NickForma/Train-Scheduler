@@ -1,0 +1,25 @@
+.header {
+    text-align: center;
+    font-size: 30px;
+    border: dashed brown 4px;
+    background-color:lightgreen;
+    padding: 20px 
+}
+
+.currentInfo {
+    border: black solid 2px;
+}
+
+table {
+    width: 100%;
+    padding: 10px;
+    font: red;
+}
+
+table, th {
+    font-weight: bold;
+    border: black 1px solid;
+    
+
+}
+
