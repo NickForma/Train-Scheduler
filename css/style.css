@@ -8,6 +8,7 @@
 
 .currentInfo {
     border: black solid 2px;
+    margin: 10px 0;
 }
 
 table {
@@ -16,10 +17,15 @@ table {
     font: red;
 }
 
-table, th {
+th {
     font-weight: bold;
     border: black 1px solid;
-    
+    }
 
+#tableHeader {
+    background-color: lightgreen;
+    border: solid black 1px;
+    text-align: center;
+   
 }
 
