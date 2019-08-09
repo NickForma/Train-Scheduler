@@ -12,9 +12,29 @@ $(document).ready(function() {
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
 
-  let database = firebase.databse();
 
-  database.ref().on(function(snapshot) {
-    console.log(snapshot.val());    
+  let database = firebase.database();
+let auth = firebase.auth();
+
+
+  // database.ref().on(function(snapshot) {
+  //   console.log(snapshot.val());    
+  // });
+
+
+  $('.submit').on('click', function(e){
+    e.preventDefault();
+    console.log(e)
+
+    let trainName = $('.trainName').val().trim()
+    let trainTime = $('.trainTime').val().trim()
+    let trainFreq = $('.trainFreq').val().trim()
+    console.log(trainName, trainTime, trainFreq)
+
+    database.ref().set({
+      trainName: trainName
+    })
   });
+
+
 });
