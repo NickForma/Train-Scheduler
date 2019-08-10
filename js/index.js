@@ -22,29 +22,33 @@ let auth = firebase.auth();
   // });
 
 
+  
   $('.submit').on('click', function(e){
     e.preventDefault();
     
-
+    
     let trainName = $('.trainName').val().trim()
     let trainDest = $('.trainDest').val().trim()
     let trainTime = $('.trainTime').val().trim()
     let trainFreq = $('.trainFreq').val().trim()
     console.log(trainName, trainTime, trainFreq)
 
+    let time = moment(trainTime).toNow();
+    
+    console.log(time);
+    
     database.ref().set({
       trainName: trainName,
       trainDest: trainDest,
       trainTime: trainTime,
       trainFreq: trainFreq
     })
-
     $('.table').append(
       `<tr>
         <td>${trainName}</td>
         <td>${trainDest}</td>
-        <td>${trainTime}</td>
         <td>${trainFreq}</td>
+        <td>${trainTime}</td>
       </tr>
       `
     )

@@ -15,9 +15,11 @@ table {
     width: 100%;
     padding: 10px;
     font: red;
+    
 }
 
 th {
+    height: 30px;
     font-weight: bold;
     border: black 1px solid;
     }
@@ -27,5 +29,13 @@ th {
     border: solid black 1px;
     text-align: center;
    
+}
+
+.addTrain {
+    border: solid black 2px;
+}
+
+input {
+    width: 90%;
 }
 

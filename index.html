@@ -9,6 +9,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <link href="css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
 
     <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase.js"></script>
     <!--<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
@@ -47,6 +49,8 @@
       <table class="table">
         <tr>
           <th id="tableHeader">Running Trains</th>
+        </tr>
+
         <tr class="titleRow">
           <th>Train Name</th>
           <th>Destination</th>
@@ -57,16 +61,16 @@
         <tr>
           <td>Mr. Train</td>
           <td>Burger King</td>
-          <td>45 minutes</td>
+          <td>45 mins</td>
           <td>05:30</td>
-          <td>30 minutes</td>
+          <td>30 mins</td>
         </tr>
         <tr>
           <td>Mrs. Train</td>
           <td>McDonalds</td>
-          <td>10 minutes</td>
+          <td>10 mins</td>
           <td>05:20</td>
-          <td>20 minutes</td>
+          <td>20 mins</td>
         </tr>
       </table>
     </div>
@@ -74,21 +78,34 @@
     <br />
     <br />
 
-    <div class="addTrain">
-      <form>
-        Train Name:
-        <input type="text" name="trainName" value="Train Name" class="trainName" />
+    <form>
+      <div class="addTrain">
+        <h1>Add a Train</h1>
+        <p>Train Name:</p>
+        <input
+          type="text"
+          name="trainName"
+          placeholder="Thomas the Tank Engine"
+          class="trainName"
+        />
         <br />
-        Destination:
-        <input type="text" name="trainDest" value="Train Destination" class="trainDest" />
+        <p>Destination:</p>
+        <input
+          type="text"
+          name="trainDest"
+          placeholder="Brampton Go Station"
+          class="trainDest"
+        />
         <br />
-        First Train Time (HH:mm, military time):
-        <input type="text" name="trainTime" value="Train Time" class="trainTime" />
+        <p>First Train Time (HH:mm, military time):</p>
+        <input type="text" name="trainTime" placeholder="07:30" class="trainTime" />
         <br />
-        Frequency (min):
-        <input type="text" name="trainFreq" value="Train Freqency" class="trainFreq" />
-        <button class="submit">Submit</button>
-      </form>
-    </div>
+        <p>Frequency (min):</p>
+        <input type="text" name="trainFreq" placeholder="30 mins" class="trainFreq" />
+        <br />
+        <br />
+        <button class="submit">Add this train! <i class="fas fa-train"></i></button>
+      </div>
+    </form>
   </body>
 </html>
