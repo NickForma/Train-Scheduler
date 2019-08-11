@@ -1,41 +1,41 @@
+body {
+  background-color: lightcoral;
+}
 .header {
-    text-align: center;
-    font-size: 30px;
-    border: dashed brown 4px;
-    background-color:lightgreen;
-    padding: 20px 
+  text-align: center;
+  font-size: 30px;
+  border: dashed brown 4px;
+  background-color: lightgreen;
+  padding: 20px;
 }
 
 .currentInfo {
-    border: black solid 2px;
-    margin: 10px 0;
+  border: black solid 2px;
+  margin: 10px 0;
 }
 
 table {
-    width: 100%;
-    padding: 10px;
-    font: red;
-    
+  width: 100%;
+  padding: 10px;
+  font: red;
 }
 
 th {
-    height: 30px;
-    font-weight: bold;
-    border: black 1px solid;
-    }
+  height: 30px;
+  font-weight: bold;
+  border: black 1px solid;
+}
 
 #tableHeader {
-    background-color: lightgreen;
-    border: solid black 1px;
-    text-align: center;
-   
+  background-color: lightgreen;
+  border: solid black 1px;
+  text-align: center;
 }
 
 .addTrain {
-    border: solid black 2px;
+  border: solid black 2px;
 }
 
 input {
-    width: 90%;
+  width: 90%;
 }
-

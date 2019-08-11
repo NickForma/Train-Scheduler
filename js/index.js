@@ -12,38 +12,42 @@ $(document).ready(function() {
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
 
-
   let database = firebase.database();
-let auth = firebase.auth();
+  //let auth = firebase.auth();
 
+  database.ref().on('value', function(snapshot) {
+    let sv = snapshot.val();
+    console.log(sv.trainDest)
+  });
 
-  // database.ref().on(function(snapshot) {
-  //   console.log(snapshot.val());    
-  // });
-
-
-  
-  $('.submit').on('click', function(e){
+  $(".submit").on("click", function(e) {
     e.preventDefault();
-    
-    
-    let trainName = $('.trainName').val().trim()
-    let trainDest = $('.trainDest').val().trim()
-    let trainTime = $('.trainTime').val().trim()
-    let trainFreq = $('.trainFreq').val().trim()
-    console.log(trainName, trainTime, trainFreq)
 
-    let time = moment(trainTime).toNow();
-    
-    console.log(time);
-    
-    database.ref().set({
+    let trainName = $(".trainName")
+      .val()
+      .trim();
+    let trainDest = $(".trainDest")
+      .val()
+      .trim();
+    let trainTime = $(".trainTime")
+      .val()
+      .trim();
+    let trainFreq = $(".trainFreq")
+      .val()
+      .trim();
+    console.log(trainName, trainTime, trainFreq);
+
+    let timeToNow = moment([trainTime]).toNow("mm");
+
+    console.log(timeToNow);
+
+    database.ref().addChild({
       trainName: trainName,
       trainDest: trainDest,
       trainTime: trainTime,
       trainFreq: trainFreq
-    })
-    $('.table').append(
+    });
+    $(".table").append(
       `<tr>
         <td>${trainName}</td>
         <td>${trainDest}</td>
@@ -51,8 +55,6 @@ let auth = firebase.auth();
         <td>${trainTime}</td>
       </tr>
       `
-    )
+    );
   });
-
-
 });
