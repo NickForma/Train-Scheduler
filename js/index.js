@@ -18,7 +18,18 @@ $(document).ready(function() {
   database.ref().on('value', function(snapshot) {
     let sv = snapshot.val();
     console.log(sv.trainDest)
-  });
+    console.log(sv)
+    
+    $(".table").html(
+      `<tr>
+      <td>${sv.trainName}</td>
+      <td>${sv.trainDest}</td>
+      <td>${sv.trainFreq}</td>
+      <td>${sv.trainTime}</td>
+      </tr>
+      `);
+      
+    });
 
   $(".submit").on("click", function(e) {
     e.preventDefault();
@@ -37,11 +48,14 @@ $(document).ready(function() {
       .trim();
     console.log(trainName, trainTime, trainFreq);
 
-    let timeToNow = moment([trainTime]).toNow("mm");
+    let time = moment([trainTime]).format("HH, mm")
+    console.log(time)
+
+    let timeToNow = moment([trainTime]);
 
     console.log(timeToNow);
 
-    database.ref().addChild({
+    database.ref().update({
       trainName: trainName,
       trainDest: trainDest,
       trainTime: trainTime,
