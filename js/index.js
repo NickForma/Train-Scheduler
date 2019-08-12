@@ -1,7 +1,7 @@
 $(document).ready(function() {
   // Your web app's Firebase configuration
   var firebaseConfig = {
-    apiKey: "AIzaSyDgzgfmdBJM5QCbuD70TzQ3HoAtYzpf6NM",
+    apiKey: "",
     authDomain: "trainsched-581b6.firebaseapp.com",
     databaseURL: "https://trainsched-581b6.firebaseio.com",
     projectId: "trainsched-581b6",
